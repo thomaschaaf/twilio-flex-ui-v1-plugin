@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Manager } from '@twilio/flex-ui'
 import { CustomTaskListComponentStyles } from './CustomTaskList.Styles';
 import { StateToProps, DispatchToProps } from './CustomTaskList.Container';
 
@@ -12,6 +13,8 @@ type Props = StateToProps & DispatchToProps & OwnProps;
 
 // It is recommended to keep components stateless and use redux for managing states
 const CustomTaskList: React.FunctionComponent<Props> = (props: Props) => {
+  console.log(Manager)
+
   if (!props.isOpen) {
     return null;
   }
